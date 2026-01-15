@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7r2xumukvumd"]
+
+[ext_resource type="Texture2D" uid="uid://byih1h4gf7k4k" path="res://Screenshot 2026-01-14 132316.png" id="1_olh8e"]
+[ext_resource type="Script" uid="uid://dop8g4nvvkj0x" path="res://camera_2dLaptop.gd" id="1_u5elu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1.9999999, 19)
+script = ExtResource("1_u5elu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -573.0
+offset_top = -301.0
+offset_right = 1983.0
+offset_bottom = 1293.0
+scale = Vector2(0.4121289, 0.4024299)
+texture = ExtResource("1_olh8e")
