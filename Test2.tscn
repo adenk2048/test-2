@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dumgk4kl51r8k"]
+[gd_scene load_steps=6 format=3 uid="uid://dumgk4kl51r8k"]
 
 [ext_resource type="Script" uid="uid://csli0dnvd1dqm" path="res://camera_2d.gd" id="1_v57jl"]
 [ext_resource type="Texture2D" uid="uid://dmogtp5s0mduk" path="res://reze.jpg" id="2_qypcy"]
 [ext_resource type="Texture2D" uid="uid://7inod6scpsj8" path="res://61LdecwlWYL-removebg-preview.png" id="3_2nbpf"]
+[ext_resource type="Script" uid="uid://v6udkms6mt51" path="res://HUD.gd" id="3_f4j51"]
 [ext_resource type="Script" uid="uid://bu2grs87l6fvu" path="res://button.gd" id="4_f4j51"]
 
 [node name="Node2D" type="Node2D"]
@@ -18,6 +19,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("3_f4j51")
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
