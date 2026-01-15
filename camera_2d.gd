@@ -14,3 +14,4 @@ func _process(_delta: float) -> void:
 	if local_mouse_pos.x<-570: 
 		position.x+=1
 	pass
+	#guys i got it to work :l
