@@ -17,4 +17,8 @@ func _process(_delta: float) -> void:
 	#guys i got it to work :l
 	#another test just in case
 	#test123
+#<<<<<<< HEAD
 	#final test123 now save it
+#=======
+	#hi justin :D
+#>>>>>>> 5765b53839f9b6d78099af54445ffe8f346efdf7
