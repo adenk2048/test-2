@@ -1,9 +1,9 @@
 extends Control
 
 @onready var label_clock: Label = $Clock
-@onready var label_day: Label = $Day_Counter
-@onready var label_money: Label = $Money
-@onready var save_button: Button = $Save_Button
+#@onready var label_day: Label = $Day_Counter
+#@onready var label_money: Label = $Money
+#@onready var save_button: Button = $Save_Button
 
 var time := 0.0
 var day := 1
@@ -11,13 +11,13 @@ var money = 0
 
 func _process(delta: float) -> void:
 	#Constructors
-	save_button.text = "Save"
+	#save_button.text = "Save"
 	
 	
 	time += delta /10
 	label_clock.text = str(int(round(time))) + ":00"
-	label_day.text = "Day " + str(day)
-	label_money.text = "Money: $" + str(money)
+	#label_day.text = "Day " + str(day)
+	#label_money.text = "Money: $" + str(money)
 	money+=1
 	round(money)
 	#save_button.pressed.connect(_Save)

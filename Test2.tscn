@@ -30,3 +30,10 @@ offset_bottom = 566.0
 scale = Vector2(0.44800347, 0.45410684)
 icon = ExtResource("3_2nbpf")
 script = ExtResource("4_f4j51")
+
+[node name="Clock" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -224.0
+offset_top = -157.0
+offset_right = -184.0
+offset_bottom = -134.0
