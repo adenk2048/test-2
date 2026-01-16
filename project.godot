@@ -14,3 +14,11 @@ config/name="Test2"
 run/main_scene="uid://dumgk4kl51r8k"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Hud="*res://HUD.tscn"
+
+[editor]
+
+version_control/autoload_on_startup=true

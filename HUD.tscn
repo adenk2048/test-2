@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6axg347kypj0"]
+
+[ext_resource type="Script" uid="uid://v6udkms6mt51" path="res://HUD.gd" id="1_k5de2"]
+
+[node name="Node" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_k5de2")
+
+[node name="Clock" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 39.0
+offset_right = 197.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 64
