@@ -1,6 +1,7 @@
 extends Button
 
-
+#We don't really need this script anymore 
+#it was also causing problems /w debugging
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
