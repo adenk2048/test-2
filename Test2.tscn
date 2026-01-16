@@ -32,7 +32,6 @@ icon = ExtResource("3_2nbpf")
 script = ExtResource("4_f4j51")
 
 [node name="Clock" type="Label" parent="Control"]
-visible = false
 layout_mode = 0
 offset_left = -224.0
 offset_top = -157.0

@@ -1,43 +1,32 @@
 extends Control
 
 @onready var computer_button: Button = $ComputerButton
-@onready var label_clock: Label = $Clock
-#@onready var label_day: Label = $Day_Counter
-#@onready var label_money: Label = $Money
+#@onready var label_day: Label = $Day_Counter <- don't delete
 #@onready var save_button: Button = $Save_Button
 
 var time := 0.0
 var day := 1
 var money = 0
 
-func _process(delta: float) -> void:
+func _process(delta: float) -> void: #will fix this later
 	#Constructors
 	#save_button.text = "Save"
 	
 	
-	time += delta /10
-	label_clock.text = str(int(round(time))) + ":00"
-	#label_day.text = "Day " + str(day)
-	#label_money.text = "Money: $" + str(money)
-	money+=1
-	round(money)
+	
+	
 	#save_button.pressed.connect(_Save)
 	#checks when button is pressed and fires signal to _Save to run
 	computer_button.pressed.connect(_Computerbutton)
 
 
 	
-	if time >= 23.9:
-		time = 0.0
-		day+=1
-	if day == 30:
-		print("You win bruh")
-		get_tree().quit()
-		
 		
 func _Computerbutton():
 	print("The button works")
 	get_tree().change_scene_to_file("res://Laptop.tscn")
+	#label_day.add_theme_color_override("font_color", Color.BLACK)
+	#^attempt to change color of text while changing scenes, it didn't work :(
 		
 #func _Save():
 #	var save_nodes = get_tree().get_nodes_in_group("SaveData")
