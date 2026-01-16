@@ -8,7 +8,7 @@ var time := 0.0
 var day := 1
 var money = 0
 
-func _process(_delta: float) -> void: #will fix this later
+func _process(delta: float) -> void: #will fix this later
 	#Constructors
 	#save_button.text = "Save"
 	
