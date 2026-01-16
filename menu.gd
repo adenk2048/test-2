@@ -1,5 +1,6 @@
 extends Control
 
+@onready var computer_button: Button = $ComputerButton
 @onready var label_clock: Label = $Clock
 #@onready var label_day: Label = $Day_Counter
 #@onready var label_money: Label = $Money
@@ -22,6 +23,8 @@ func _process(delta: float) -> void:
 	round(money)
 	#save_button.pressed.connect(_Save)
 	#checks when button is pressed and fires signal to _Save to run
+	computer_button.pressed.connect(_Computerbutton)
+
 
 	
 	if time >= 23.9:
@@ -32,7 +35,10 @@ func _process(delta: float) -> void:
 		get_tree().quit()
 		
 		
-
+func _Computerbutton():
+	print("The button works")
+	get_tree().change_scene_to_file("res://Laptop.tscn")
+		
 #func _Save():
 #	var save_nodes = get_tree().get_nodes_in_group("SaveData")
 	#print("Button pressed")
