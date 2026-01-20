@@ -24,7 +24,7 @@ func _process(delta: float) -> void: #will fix this later
 		
 func _Computerbutton():
 	print("The button works")
-	get_tree().change_scene_to_file("res://Laptop.tscn")
+	get_tree().change_scene_to_file("res://robin_good_home.tscn")
 	#label_day.add_theme_color_override("font_color", Color.BLACK)
 	#^attempt to change color of text while changing scenes, it didn't work :(
 		
