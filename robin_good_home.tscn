@@ -24,7 +24,7 @@ offset_left = 1.0
 offset_top = 198.0
 offset_right = 254.0
 offset_bottom = 242.0
-text = "Button fahhhh"
+text = "Industry 1"
 
 [node name="Industry2" type="Button" parent="Control"]
 layout_mode = 0
