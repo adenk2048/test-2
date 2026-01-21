@@ -1,3 +1,50 @@
-[gd_scene load_steps=0 format=3 uid="uid://b68anxb2g0eov"]
+[gd_scene load_steps=3 format=3 uid="uid://b68anxb2g0eov"]
+
+[ext_resource type="Script" uid="uid://sjv4ip2ak7xr" path="res://goToHome.gd" id="1_35j7l"]
+[ext_resource type="Texture2D" uid="uid://d1ry5co4i6f6" path="res://curve-down-arrow.png" id="2_ixbrb"]
 
 [node name="Industries" type="Node2D"]
+
+[node name="goToHome" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_35j7l")
+
+[node name="Industry1" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 240.00002
+offset_right = 255.0
+offset_bottom = 284.0
+scale = Vector2(0.92053413, 1.0175264)
+text = "Industry 1"
+
+[node name="Industry2" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 400.0
+offset_right = 257.0
+offset_bottom = 444.0
+scale = Vector2(0.91858965, 1)
+text = "Industry2"
+
+[node name="Industry3" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 550.0
+offset_right = 260.0
+offset_bottom = 591.0
+scale = Vector2(0.9211988, 1.0672367)
+text = "Industry3"
+
+[node name="HomeButton" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 226.99998
+offset_top = 203.0
+offset_right = 747.0
+offset_bottom = 723.0
+rotation = -1.5705711
+scale = Vector2(0.3828328, -0.43180954)
+icon = ExtResource("2_ixbrb")
