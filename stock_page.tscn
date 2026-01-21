@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cu861mdb2t5fx"]
+
+[node name="StockPage" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GraphNode" type="GraphNode" parent="Control"]
+layout_mode = 0
+offset_right = 9.0
+offset_bottom = 55.0
