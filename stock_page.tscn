@@ -8,7 +8,16 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="GraphNode" type="GraphNode" parent="Control"]
+[node name="GraphEdit" type="GraphEdit" parent="Control"]
 layout_mode = 0
-offset_right = 9.0
-offset_bottom = 55.0
+offset_right = 631.0
+offset_bottom = 331.0
+scroll_offset = Vector2(-268, -85)
+
+[node name="GraphNode" type="GraphNode" parent="Control/GraphEdit"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 85.0
+offset_right = 277.0
+offset_bottom = 140.0
+mouse_filter = 1

@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	#save_button.text = "Save"
 	
 	
-	time += delta * 10
+	time += delta * 2
 	label_clock.text = str(int(round(time))) + ":00"
 	label_day.text = "Day " + str(day)
 	#label_money.text = "Money: $" + str(money)
