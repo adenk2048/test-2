@@ -4,6 +4,7 @@ extends Control
 @onready var button_industry2: Button = $Industry2
 @onready var button_industry3: Button = $Industry3
 @onready var home_button: Button = $HomeButton
+@onready var stock_button: Button = $StockButton
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -15,6 +16,7 @@ func _process(delta: float) -> void:
 	button_industry2.pressed.connect(_gotoindustry2)
 	button_industry3.pressed.connect(_gotoindustry3)
 	home_button.pressed.connect(_gotohome)
+	stock_button.pressed.connect(_gotostock)
 	pass
 	
 	
@@ -26,3 +28,5 @@ func _gotoindustry3(): #rename this to goto[industryname]
 	get_tree().change_scene_to_file("res://Stocks3.tscn")
 func _gotohome(): 
 	get_tree().change_scene_to_file("res://robin_good_home.tscn")
+func _gotostock(): 
+	get_tree().change_scene_to_file("res://stock_page.tscn")

@@ -48,3 +48,11 @@ offset_bottom = 723.0
 rotation = -1.5705711
 scale = Vector2(0.3828328, -0.43180954)
 icon = ExtResource("2_sf37h")
+
+[node name="StockButton" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 232.0
+offset_right = 967.0
+offset_bottom = 464.0
+text = "stock page woa"
