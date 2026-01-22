@@ -35,11 +35,3 @@ offset_left = -224.0
 offset_top = -157.0
 offset_right = -184.0
 offset_bottom = -134.0
-
-[node name="ColorRect" type="ColorRect" parent="Control"]
-layout_mode = 0
-offset_left = -559.0
-offset_top = 258.0
-offset_bottom = 298.0
-scale = Vector2(0.72769165, 1.0894802)
-color = Color(1, 1, 0.2627451, 1)
