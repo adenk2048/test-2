@@ -1,6 +1,7 @@
 extends Control
 
 @onready var computer_button: Button = $ComputerButton
+@onready var color_rect: ColorRect = $ColorRect
 #@onready var label_day: Label = $Day_Counter <- don't delete
 #@onready var save_button: Button = $Save_Button
 
@@ -12,7 +13,15 @@ func _process(delta: float) -> void: #will fix this later
 	#Constructors
 	#save_button.text = "Save"
 	#test
+	var local_mouse_pos = get_local_mouse_position()
+
+	#print(local_mouse_pos)
+	#print(position.x)
 	
+#	if (local_mouse_pos.x > 400 and color_rect.position.x < 250):
+#		color_rect.position.x-=7
+#	if (local_mouse_pos.x < -400 and color_rect.position.x > -250):
+#		color_rect.position.x+=7
 	
 	
 	#save_button.pressed.connect(_Save)
