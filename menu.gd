@@ -20,8 +20,6 @@ func _process(delta: float) -> void: #will fix this later
 	computer_button.pressed.connect(_Computerbutton)
 
 
-	
-		
 func _Computerbutton():
 	print("The button works")
 	#get_tree().change_scene_to_file("res://robin_good_home.tscn")

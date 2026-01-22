@@ -6,6 +6,8 @@ extends Control
 @onready var industry3_button: Button = $Industry3
 @onready var buy_button: Button = $Buy
 @onready var sell_button: Button = $Sell
+@onready var stock_input: LineEdit = $NumberOfStocks
+var stockamount = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,6 +23,7 @@ func _process(delta: float) -> void:
 	industry3_button.pressed.connect(_gotoindustry3)
 	buy_button.pressed.connect(_buy)
 	sell_button.pressed.connect(_sell)
+	
 	pass
 	
 func _gotohome():
@@ -32,7 +35,11 @@ func _gotoindustry2():
 func _gotoindustry3(): 
 	get_tree().change_scene_to_file("res://Stocks3.tscn")
 func _buy(): 
-	print("bought a stock")
+	print(stock_input.text)
+	print("bought " + stock_input.text + " stocks")
+	stockamount+=int(stock_input.text)
 func _sell():
-	print("sold a stock")
+	print(stock_input.text)
+	print("sold " + stock_input.text + " stocks")
+	stockamount-=int(stock_input.text)
 	
