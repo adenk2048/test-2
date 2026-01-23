@@ -7,7 +7,6 @@ extends Control
 
 var time := 0.0
 var day := 1
-var money = 0
 
 func _process(delta: float) -> void: #will fix this later
 	#Constructors

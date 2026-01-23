@@ -7,7 +7,7 @@ extends Control
 @onready var buy_button: Button = $Buy
 @onready var sell_button: Button = $Sell
 @onready var stock_input: LineEdit = $NumberOfStocks
-var stockamount = 0
+var currentStock = 0;
 
 
 # Called when the node enters the scene tree for the first time.
@@ -37,9 +37,11 @@ func _gotoindustry3():
 func _buy(): 
 	print(stock_input.text)
 	print("bought " + stock_input.text + " stocks")
-	stockamount+=int(stock_input.text)
+	MoneyAndStocks.stocks[currentStock]+=int(stock_input.text)
+	print("You now have " + str(MoneyAndStocks.stocks[currentStock]) + " stocks")
 func _sell():
 	print(stock_input.text)
 	print("sold " + stock_input.text + " stocks")
-	stockamount-=int(stock_input.text)
+	MoneyAndStocks.stocks[currentStock]-=int(stock_input.text)
+	print("You now have " + str(MoneyAndStocks.stocks[currentStock]) + " stocks")
 	
