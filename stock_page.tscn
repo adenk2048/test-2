@@ -25,6 +25,17 @@ text = "Insert Stock name here"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Money" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 902.0
+offset_top = 22.0
+offset_right = 1189.0
+offset_bottom = 117.0
+theme_override_font_sizes/font_size = 64
+text = "$"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="GraphEdit" type="GraphEdit" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
