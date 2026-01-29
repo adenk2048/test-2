@@ -1,14 +1,13 @@
 extends Control
 
 @onready var computer_button: Button = $ComputerButton
-@onready var color_rect: ColorRect = $ColorRect
+@onready var weatherman: VideoStreamPlayer = $Weatherman
+#@onready var color_rect: ColorRect = $ColorRect
 #@onready var label_day: Label = $Day_Counter <- don't delete
 #@onready var save_button: Button = $Save_Button
-
-var time := 0.0
-var day := 1
-
+var frame = 0;
 func _process(delta: float) -> void: #will fix this later
+	frame+=1
 	#Constructors
 	#save_button.text = "Save"
 	#test
@@ -19,8 +18,12 @@ func _process(delta: float) -> void: #will fix this later
 	
 	#save_button.pressed.connect(_Save)
 	#checks when button is pressed and fires signal to _Save to run
+	if frame%200==0:
+		weatherman.play()
 	computer_button.pressed.connect(_Computerbutton)
 
+
+	
 
 func _Computerbutton():
 	print("The button works")

@@ -13,7 +13,7 @@ func _process(_delta: float) -> void:
 	#print(position.x)
 	
 	if (local_mouse_pos.x > 400 and position.x < 250):
-		position.x+=7
+		position.x+=2
 	if (local_mouse_pos.x < -400 and position.x > -250):
-		position.x-=7
+		position.x-=2
 	pass
