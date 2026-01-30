@@ -27,3 +27,11 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 48
+
+[node name="Energy" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_top = 577.0
+offset_right = 106.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 32
+text = "Lorem ipsum"

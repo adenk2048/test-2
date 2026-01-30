@@ -2,19 +2,38 @@ extends Control
 
 @onready var label_clock: Label = $Clock
 @onready var label_day: Label = $Day_Counter
+@onready var label_energy: Label = $Energy
 #@onready var label_money: Label = $Money
 #@onready var save_button: Button = $Save_Button
 
 var time := 0.0
 var day := 1
 var money = 0
+var energyloss = 0
+var energy = 100
+
 
 func _process(delta: float) -> void:
 	#Constructors
 	#save_button.text = "Save"
+	var current_scene := get_tree().current_scene
+
+	#if current_scene: #for debugging :l
+	#	print(current_scene.name)
+	#else:
+	#	print("nothing yet null instance")
+		
+	if current_scene and current_scene.name == "Node2D":
+		label_energy.visible = true
+	else:
+		label_energy.visible = false
+		
+
 	
+	time += delta / 10
+	energyloss += delta / 10
+	print(energyloss)
 	
-	time += delta * 2
 	label_clock.text = str(int(round(time))) + ":00"
 	label_day.text = "Day " + str(day)
 	#label_money.text = "Money: $" + str(money)
@@ -23,6 +42,13 @@ func _process(delta: float) -> void:
 	#save_button.pressed.connect(_Save)
 	#checks when button is pressed and fires signal to _Save to run
 
+
+
+
+	label_energy.text = "Energy: " + str(round(100-energyloss)) + " / 100"
+
+
+
 	
 	if time >= 23.9:
 		time = 0.0
@@ -30,7 +56,10 @@ func _process(delta: float) -> void:
 	if day == 30:
 		print("You win bruh")
 		get_tree().quit()
-		
+	
+	if round(100-energyloss) <= 0:
+		print("You tired bruh")
+		get_tree().quit()
 		
 
 #func _Save():
