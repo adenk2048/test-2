@@ -10,7 +10,7 @@ var time := 0.0
 var day := 1
 var money = 0
 var energyloss = 0
-var energy = 100
+
 
 
 func _process(delta: float) -> void:
@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 		
 	if(current_scene and current_scene.name != "EndScene"):
 		time += delta/10
-		energyloss += delta / 10
+		energyloss += delta *  10
 		print(energyloss)
 	
 		label_clock.text = str(int(round(time))) + ":00"
@@ -62,7 +62,9 @@ func _process(delta: float) -> void:
 	
 	if round(100-energyloss) <= 0:
 		print("You tired bruh")
-		get_tree().quit()
+		energyloss-=50
+		time+=8
+		
 		
 
 #func _Save():
