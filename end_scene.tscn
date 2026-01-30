@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cnebpclihxxfq"]
+[gd_scene load_steps=2 format=3 uid="uid://cnebpclihxxfq"]
+
+[ext_resource type="Script" uid="uid://8liakoqecbji" path="res://control.gd" id="1_3wcc1"]
 
 [node name="EndScene" type="Node2D"]
 
@@ -7,13 +9,14 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_3wcc1")
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Money" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 236.0
-offset_top = 203.00006
-offset_right = 418.0122
-offset_bottom = 267.47272
+offset_left = 218.99998
+offset_top = 208.00002
+offset_right = 401.0122
+offset_bottom = 272.47266
 scale = Vector2(3.3600144, 3.4267163)
 text = "wow u won :confetti:"
 horizontal_alignment = 1

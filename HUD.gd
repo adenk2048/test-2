@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 		label_energy.visible = false
 		
 	if(current_scene and current_scene.name != "EndScene"):
-		time += delta*100
+		time += delta/10
 		energyloss += delta / 10
 		print(energyloss)
 	

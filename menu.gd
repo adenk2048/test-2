@@ -5,7 +5,7 @@ extends Control
 #@onready var color_rect: ColorRect = $ColorRect
 #@onready var label_day: Label = $Day_Counter <- don't delete
 #@onready var save_button: Button = $Save_Button
-var frame = 0;
+var frame = -1;
 func _process(delta: float) -> void: #will fix this later
 	frame+=1
 	#Constructors
