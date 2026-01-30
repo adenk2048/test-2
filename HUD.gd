@@ -28,17 +28,20 @@ func _process(delta: float) -> void:
 	else:
 		label_energy.visible = false
 		
-
+	if(current_scene and current_scene.name != "EndScene"):
+		time += delta*100
+		energyloss += delta / 10
+		print(energyloss)
 	
-	time += delta / 10
-	energyloss += delta / 10
-	print(energyloss)
-	
-	label_clock.text = str(int(round(time))) + ":00"
-	label_day.text = "Day " + str(day)
+		label_clock.text = str(int(round(time))) + ":00"
+		label_day.text = "Day " + str(day)
 	#label_money.text = "Money: $" + str(money)
-	money+=1
-	round(money)
+		money+=1
+		round(money)
+	else:
+		label_clock.visible = false;
+		label_day.visible = false;
+
 	#save_button.pressed.connect(_Save)
 	#checks when button is pressed and fires signal to _Save to run
 
@@ -55,7 +58,7 @@ func _process(delta: float) -> void:
 		day+=1
 	if day == 30:
 		print("You win bruh")
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://end_scene.tscn")
 	
 	if round(100-energyloss) <= 0:
 		print("You tired bruh")

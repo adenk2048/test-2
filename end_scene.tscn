@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cnebpclihxxfq"]
+
+[node name="EndScene" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 203.00006
+offset_right = 418.0122
+offset_bottom = 267.47272
+scale = Vector2(3.3600144, 3.4267163)
+text = "wow u won :confetti:"
+horizontal_alignment = 1
+vertical_alignment = 1
