@@ -30,8 +30,8 @@ func _process(delta: float) -> void:
 		
 	if(current_scene and current_scene.name != "EndScene"):
 		time += delta/10
-		energyloss += delta *  10
-		print(energyloss)
+		energyloss += delta * 10
+		#print(energyloss)
 	
 		label_clock.text = str(int(round(time))) + ":00"
 		label_day.text = "Day " + str(day)
@@ -61,8 +61,10 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://end_scene.tscn")
 	
 	if round(100-energyloss) <= 0:
-		print("You tired bruh")
 		energyloss-=50
+		Transition.toBlack()
+		await Transition.transition_finished
+		print("You tired bruh")
 		time+=8
 		
 		

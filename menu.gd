@@ -27,6 +27,8 @@ func _process(delta: float) -> void: #will fix this later
 
 func _Computerbutton():
 	print("The button works")
+	Transition.toBlack()
+	await Transition.transition_finished
 	#get_tree().change_scene_to_file("res://robin_good_home.tscn")
 	get_tree().change_scene_to_file("res://robin_good_home.tscn")
 	#label_day.add_theme_color_override("font_color", Color.BLACK)
