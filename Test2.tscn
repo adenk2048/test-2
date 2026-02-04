@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7inod6scpsj8" path="res://61LdecwlWYL-removebg-preview.png" id="3_2nbpf"]
 [ext_resource type="Script" uid="uid://v6udkms6mt51" path="res://menu.gd" id="3_f4j51"]
 [ext_resource type="VideoStream" uid="uid://cqw7fc6jwo2j4" path="res://buur-weather-machine.ogv" id="5_f4j51"]
-[ext_resource type="Texture2D" uid="uid://c87etbgr1jabq" path="res://fnaf.jpg" id="5_nhswp"]
+[ext_resource type="Texture2D" uid="uid://btbcbuan1fk6h" path="res://fnaf2.jpg" id="5_nhswp"]
 
 [node name="Start" type="Node2D"]
 
@@ -20,12 +20,13 @@ script = ExtResource("3_f4j51")
 
 [node name="ComputerButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = -125.99999
-offset_top = 125.0
-offset_right = 458.0
-offset_bottom = 566.0
+offset_left = -143.0
+offset_top = 72.0
+offset_right = 441.0
+offset_bottom = 513.0
 scale = Vector2(0.44800347, 0.45410684)
 icon = ExtResource("3_2nbpf")
+flat = true
 
 [node name="Clock" type="Label" parent="Control"]
 layout_mode = 0
@@ -46,9 +47,9 @@ stream = ExtResource("5_f4j51")
 [node name="TextureRect" type="TextureRect" parent="Control"]
 show_behind_parent = true
 layout_mode = 0
-offset_left = -829.0
-offset_top = -354.0
-offset_right = 845.0
-offset_bottom = 467.0
+offset_left = -861.0
+offset_top = -464.0
+offset_right = 813.0
+offset_bottom = 357.0
 mouse_filter = 2
 texture = ExtResource("5_nhswp")
