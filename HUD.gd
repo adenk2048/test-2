@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var label_day: Label = $Day_Counter
 @onready var label_energy: Label = $Energy
 @onready var sleep_button: Button = $SleepButton
+@onready var menu_button: OptionButton = $ItemList
 #@onready var label_money: Label = $Money
 #@onready var save_button: Button = $Save_Button
 var time := 0.0
@@ -11,7 +12,9 @@ var day := 1
 var money = 0
 var energyloss = 0
 
-
+func _ready() -> void:
+	menu_button.item_count = 3
+	menu_button.add_item("wow")
 
 func _process(delta: float) -> void:
 	#Constructors
@@ -22,10 +25,6 @@ func _process(delta: float) -> void:
 	#else:
 	#	print("nothing yet null instance")
 		
-	if current_scene and current_scene.name == "Start":
-		label_energy.visible = true
-	else:
-		label_energy.visible = false
 		
 	time += delta/10
 	energyloss += delta / 5
@@ -38,12 +37,17 @@ func _process(delta: float) -> void:
 	#label_money.text = "Money: $" + str(money)
 		money+=1
 		round(money)
+		sleep_button.visible = true
 		label_clock.visible = true
 		label_day.visible = true
+		menu_button.visible = true
+		label_energy.visible = true
 	else:
 		label_clock.visible = false
 		label_day.visible = false
 		sleep_button.visible = false
+		menu_button.visible = false
+		label_energy.visible = false
 
 	#save_button.pressed.connect(_Save)
 	#checks when button is pressed and fires signal to _Save to run
