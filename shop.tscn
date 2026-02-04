@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp75isnv8cjln"]
+
+[ext_resource type="Script" uid="uid://7iwk7jmf1v78" path="res://shop.gd" id="1_viryw"]
+
+[node name="Shop" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_viryw")
+
+[node name="BuySugar" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 202.0
+offset_right = 352.0
+offset_bottom = 276.0

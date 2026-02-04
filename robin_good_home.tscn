@@ -54,3 +54,11 @@ offset_bottom = 723.0
 rotation = -1.5705711
 scale = Vector2(0.3828328, -0.43180954)
 icon = ExtResource("3_rbd2j")
+
+[node name="Shop" type="Button" parent="HomeToIndustry"]
+layout_mode = 0
+offset_left = 859.0
+offset_top = 4.0
+offset_right = 1153.0
+offset_bottom = 58.0
+text = "Shop button"
