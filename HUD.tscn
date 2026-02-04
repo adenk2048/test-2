@@ -1,21 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://c6axg347kypj0"]
 
-[ext_resource type="Script" uid="uid://bbhaongh2i1vt" path="res://HUD.gd" id="1_k5de2"]
+[ext_resource type="Script" uid="uid://bmgolostaohka" path="res://HUD.gd" id="1_k5de2"]
 
-[node name="Node" type="Node"]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_k5de2")
-metadata/_edit_use_anchors_ = true
 
-[node name="Clock" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
+[node name="Clock" type="Label" parent="."]
 offset_left = 978.0
 offset_top = 1.0
 offset_right = 1123.0
@@ -24,18 +14,23 @@ theme_override_font_sizes/font_size = 64
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Day_Counter" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
+[node name="Day_Counter" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 48
 metadata/_edit_use_anchors_ = true
 
-[node name="Energy" type="Label" parent="CanvasLayer/Control"]
-layout_mode = 0
+[node name="Energy" type="Label" parent="."]
 offset_top = 577.0
 offset_right = 106.0
 offset_bottom = 622.0
 theme_override_font_sizes/font_size = 32
 text = "Lorem ipsum"
 metadata/_edit_use_anchors_ = true
+
+[node name="SleepButton" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 494.0
+offset_right = 251.0
+offset_bottom = 576.0
+text = "Sleep"

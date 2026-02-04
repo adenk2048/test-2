@@ -2,7 +2,6 @@ extends Control
 
 @onready var computer_button: Button = $ComputerButton
 @onready var weatherman: VideoStreamPlayer = $Weatherman
-@onready var sleep: Button = $Sleep
 #@onready var color_rect: ColorRect = $ColorRect
 #@onready var label_day: Label = $Day_Counter <- don't delete
 #@onready var save_button: Button = $Save_Button
@@ -22,8 +21,6 @@ func _process(_delta: float) -> void: #will fix this later
 	if frame%200==0:
 		weatherman.play()
 	computer_button.pressed.connect(_Computerbutton)
-
-
 	
 
 	
