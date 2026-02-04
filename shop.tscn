@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dp75isnv8cjln"]
+[gd_scene load_steps=6 format=3 uid="uid://dp75isnv8cjln"]
 
 [ext_resource type="Script" uid="uid://7iwk7jmf1v78" path="res://shop.gd" id="1_viryw"]
+[ext_resource type="Texture2D" uid="uid://d1ry5co4i6f6" path="res://curve-down-arrow.png" id="2_6lah5"]
+[ext_resource type="Texture2D" uid="uid://droargogi6l71" path="res://sugar.jpeg" id="2_e7rdd"]
+[ext_resource type="Texture2D" uid="uid://nlxlughdtkdo" path="res://coffee.jpg" id="3_blqjs"]
+[ext_resource type="Texture2D" uid="uid://dityt8e4884re" path="res://50hourenergy.png" id="4_fgaav"]
 
 [node name="Shop" type="Node2D"]
 
@@ -10,10 +14,83 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_viryw")
+metadata/_edit_use_anchors_ = true
 
 [node name="BuySugar" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 55.0
-offset_top = 202.0
-offset_right = 352.0
-offset_bottom = 276.0
+offset_left = 36.0
+offset_top = 461.0
+offset_right = 333.0
+offset_bottom = 535.0
+text = "Buy"
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 193.0
+offset_right = 358.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 42
+text = "$5.00"
+horizontal_alignment = 1
+
+[node name="BuyCoffee" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 461.0
+offset_right = 691.0
+offset_bottom = 535.0
+text = "Buy"
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 198.0
+offset_right = 681.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 42
+text = "$10.00"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 737.0
+offset_top = 196.0
+offset_right = 1086.0
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 42
+text = "$50.00"
+horizontal_alignment = 1
+
+[node name="BuyFifty" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 743.0
+offset_top = 459.0
+offset_right = 1040.0
+offset_bottom = 533.0
+text = "Buy"
+
+[node name="BackButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 174.00006
+offset_top = 4.9999995
+offset_right = 694.00006
+offset_bottom = 525.0
+rotation = 1.5709175
+scale = Vector2(0.3136281, 0.3346381)
+icon = ExtResource("2_6lah5")
+
+[node name="Sugar" type="Sprite2D" parent="."]
+position = Vector2(187, 350)
+scale = Vector2(0.47937503, 0.47937503)
+texture = ExtResource("2_e7rdd")
+
+[node name="Coffee" type="Sprite2D" parent="."]
+position = Vector2(546, 349)
+scale = Vector2(0.19739583, 0.19739583)
+texture = ExtResource("3_blqjs")
+
+[node name="50Hourenergy" type="Sprite2D" parent="."]
+position = Vector2(903, 350)
+scale = Vector2(0.5656249, 0.5607637)
+texture = ExtResource("4_fgaav")
