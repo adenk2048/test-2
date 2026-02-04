@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://v6udkms6mt51" path="res://menu.gd" id="3_f4j51"]
 [ext_resource type="VideoStream" uid="uid://cqw7fc6jwo2j4" path="res://buur-weather-machine.ogv" id="5_f4j51"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Start" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("1_v57jl")
@@ -41,3 +41,8 @@ offset_right = -27.0
 offset_bottom = 1.0
 scale = Vector2(0.5, 0.5)
 stream = ExtResource("5_f4j51")
+
+[node name="Sleep" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

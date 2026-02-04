@@ -2,11 +2,12 @@ extends Control
 
 @onready var computer_button: Button = $ComputerButton
 @onready var weatherman: VideoStreamPlayer = $Weatherman
+@onready var sleep: Button = $Sleep
 #@onready var color_rect: ColorRect = $ColorRect
 #@onready var label_day: Label = $Day_Counter <- don't delete
 #@onready var save_button: Button = $Save_Button
 var frame = -1;
-func _process(delta: float) -> void: #will fix this later
+func _process(_delta: float) -> void: #will fix this later
 	frame+=1
 	#Constructors
 	#save_button.text = "Save"
@@ -25,14 +26,13 @@ func _process(delta: float) -> void: #will fix this later
 
 	
 
+	
 func _Computerbutton():
 	print("The button works")
-	Transition.toBlack()
-	await Transition.transition_finished
-	#get_tree().change_scene_to_file("res://robin_good_home.tscn")
+	#Transition.toBlack()
+	#await Transition.transition_finished
 	get_tree().change_scene_to_file("res://robin_good_home.tscn")
-	#label_day.add_theme_color_override("font_color", Color.BLACK)
-	#^attempt to change color of text while changing scenes, it didn't work :(
+	
 		
 #func _Save():
 #	var save_nodes = get_tree().get_nodes_in_group("SaveData")

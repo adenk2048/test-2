@@ -23,12 +23,12 @@ func _process(delta: float) -> void:
 	#else:
 	#	print("nothing yet null instance")
 		
-	if current_scene and current_scene.name == "Node2D":
+	if current_scene and current_scene.name == "Start":
 		label_energy.visible = true
 	else:
 		label_energy.visible = false
 		
-	if(current_scene and current_scene.name != "EndScene"):
+	if(current_scene and current_scene.name == "Start"):
 		time += delta/10
 		energyloss += delta * 10
 		#print(energyloss)
@@ -38,20 +38,17 @@ func _process(delta: float) -> void:
 	#label_money.text = "Money: $" + str(money)
 		money+=1
 		round(money)
+		label_clock.visible = true;
+		label_day.visible = true;
 	else:
+		print("hi")
 		label_clock.visible = false;
 		label_day.visible = false;
 
 	#save_button.pressed.connect(_Save)
 	#checks when button is pressed and fires signal to _Save to run
 
-
-
-
 	label_energy.text = "Energy: " + str(round(100-energyloss)) + " / 100"
-
-
-
 	
 	if time >= 23.9:
 		time = 0.0
@@ -61,14 +58,15 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://end_scene.tscn")
 	
 	if round(100-energyloss) <= 0:
-		energyloss-=50
-		Transition.toBlack()
-		await Transition.transition_finished
-		print("You tired bruh")
-		time+=8
+		_Sleep()
 		
 		
-
+func _Sleep():
+	energyloss-=50
+	Transition.toBlack()
+	await Transition.transition_finished
+	print("You tired bruh")
+	time+=8
 #func _Save():
 #	var save_nodes = get_tree().get_nodes_in_group("SaveData")
 	#print("Button pressed")

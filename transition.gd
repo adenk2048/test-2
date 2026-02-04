@@ -6,13 +6,10 @@ signal transition_finished
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	color_rect.visible = false
+	transition.animation_finished.connect(toNormal)
 	pass # Replace with function body.
 	
-func _process(delta: float) -> void:
-	transition.animation_finished.connect(toNormal)
-	
 func toNormal(anim_name):
-	print(anim_name)
 	if(anim_name == "fade_to_black"):
 		transition.play("fade_to_normal")
 		transition_finished.emit()
