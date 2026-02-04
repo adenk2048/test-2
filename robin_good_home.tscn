@@ -7,7 +7,7 @@
 [node name="RobinGoodHome" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(698, 373.00003)
+position = Vector2(722.00006, 373)
 scale = Vector2(0.53043103, 0.5828616)
 texture = ExtResource("1_0jcee")
 
@@ -62,3 +62,11 @@ offset_top = 4.0
 offset_right = 1153.0
 offset_bottom = 58.0
 text = "Shop button"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = -45.0
+offset_top = -27.0
+offset_right = 1179.0
+offset_bottom = 679.0
+mouse_filter = 2
