@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 		label_energy.visible = false
 		
 	time += delta/10
-	energyloss += delta / 10
+	energyloss += delta / 5
 	if(current_scene and current_scene.name == "Start"):
 		sleep_button.pressed.connect(Sleep)
 		#print(energyloss)
