@@ -10,7 +10,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	button_industry1.pressed.connect(_gotoindustry1)
 	button_industry2.pressed.connect(_gotoindustry2)
 	button_industry3.pressed.connect(_gotoindustry3)
