@@ -1,21 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://ueq8kxtdi2j7"]
+[gd_scene load_steps=5 format=3 uid="uid://ueq8kxtdi2j7"]
 
-[ext_resource type="Texture2D" uid="uid://coh85yqv7836q" path="res://robingood.png" id="1_0jcee"]
+[ext_resource type="Texture2D" uid="uid://b0uyfbbkdg4gk" path="res://RobinGood.png" id="1_rbd2j"]
 [ext_resource type="Script" uid="uid://csc4htam702wy" path="res://HomeToIndustry.gd" id="2_yuey4"]
+[ext_resource type="Theme" uid="uid://6shp5ck1tnja" path="res://FlatUI4/kenneyUI.tres" id="3_2sv12"]
 [ext_resource type="Texture2D" uid="uid://d1ry5co4i6f6" path="res://curve-down-arrow.png" id="3_rbd2j"]
 
 [node name="RobinGoodHome" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(722.00006, 373)
-scale = Vector2(0.53043103, 0.5828616)
-texture = ExtResource("1_0jcee")
+position = Vector2(785.24457, 354.38638)
+scale = Vector2(0.6435697, 0.6438898)
+texture = ExtResource("1_rbd2j")
 
 [node name="HomeToIndustry" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("3_2sv12")
 script = ExtResource("2_yuey4")
 
 [node name="Industry1" type="Button" parent="HomeToIndustry"]
@@ -25,24 +27,27 @@ offset_top = 240.00002
 offset_right = 255.0
 offset_bottom = 284.0
 scale = Vector2(0.92053413, 1.0175264)
+theme = ExtResource("3_2sv12")
 text = "Industry 1"
 
 [node name="Industry2" type="Button" parent="HomeToIndustry"]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 400.0
-offset_right = 257.0
-offset_bottom = 444.0
+offset_left = 4.0
+offset_top = 327.0
+offset_right = 259.0
+offset_bottom = 371.0
 scale = Vector2(0.91858965, 1)
+theme = ExtResource("3_2sv12")
 text = "Industry2"
 
 [node name="Industry3" type="Button" parent="HomeToIndustry"]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 550.0
-offset_right = 260.0
-offset_bottom = 591.0
+offset_left = 1.0000001
+offset_top = 412.0
+offset_right = 254.0
+offset_bottom = 453.0
 scale = Vector2(0.9211988, 1.0672367)
+theme = ExtResource("3_2sv12")
 text = "Industry3"
 
 [node name="HomeButton" type="Button" parent="HomeToIndustry"]
@@ -53,20 +58,24 @@ offset_right = 747.0
 offset_bottom = 723.0
 rotation = -1.5705711
 scale = Vector2(0.3828328, -0.43180954)
+theme = ExtResource("3_2sv12")
 icon = ExtResource("3_rbd2j")
 
 [node name="Shop" type="Button" parent="HomeToIndustry"]
 layout_mode = 0
-offset_left = 859.0
-offset_top = 4.0
-offset_right = 1153.0
-offset_bottom = 58.0
+offset_left = 4.0
+offset_top = 590.0
+offset_right = 231.0
+offset_bottom = 644.0
+theme = ExtResource("3_2sv12")
 text = "Shop button"
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="WhiteBackground" type="ColorRect" parent="."]
 show_behind_parent = true
 offset_left = -45.0
 offset_top = -27.0
 offset_right = 1179.0
 offset_bottom = 679.0
 mouse_filter = 2
+theme = ExtResource("3_2sv12")
+color = Color(0.1354052, 0.1354052, 0.1354052, 0.88235295)
