@@ -13,10 +13,13 @@ func _ready() -> void:
 	stocks.resize(24);
 	for i in range(24):
 		stocks[i]=0
-		names = ""
+		names[i] = ""
 	var events = FileAccess.open("C:\\Users\\willi\\Downloads\\drive-download-20260205T155341Z-1-001\\data.txt", FileAccess.READ).get_as_text()
 	var news = FileAccess.open("C:\\Users\\willi\\Downloads\\drive-download-20260205T155341Z-1-001\\headlines.txt", FileAccess.READ).get_as_text()
-	print(news)
+	var TempNames = FileAccess.open("C:\\Users\\willi\\Downloads\\drive-download-20260205T155341Z-1-001\\stock_name.txt", FileAccess.READ).get_as_text()
+	for i in range (24):
+		names[i] = (TempNames.split("\n")[i])
+		names[i] = names[i].trim_suffix("\r")
 	#740 lines
 	#24 data points each
 	var lines = events.split("\n")

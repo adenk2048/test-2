@@ -37,14 +37,12 @@ func _gotoindustry2():
 func _gotoindustry3(): 
 	get_tree().change_scene_to_file("res://Stocks3.tscn")
 func _buy(): 
-	print(stock_input.text)
 	print("bought " + stock_input.text + " stocks")
 	MoneyAndStocks.stocks[currentStock]+=int(stock_input.text)
 	if !stock_input.text == "":
 		MoneyAndStocks.money-=stockCost*int(stock_input.text)
 	print("You now have " + str(MoneyAndStocks.stocks[currentStock]) + " stocks")
 func _sell():
-	print(stock_input.text)
 	print("sold " + stock_input.text + " stocks")
 	MoneyAndStocks.stocks[currentStock]-=int(stock_input.text)
 	if !stock_input.text == "":
