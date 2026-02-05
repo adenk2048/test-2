@@ -25,8 +25,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	var current_scene := get_tree().current_scene
-	if(current_scene):
-		print(current_scene.name)
 	if(current_scene and current_scene.name == "@Node2D@8"):
 		sugar_button.visible = true
 		coffee_button.visible = true

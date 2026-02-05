@@ -1,17 +1,36 @@
 extends Node
 var money = 0
 var stocks = []
-
-
-
+var names = []
+var stockEvents = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void: 
-	#bro why is this so annoying
+	#this doesn't work rn
+	#we already have data from running it in VSCode so fix as last priority
+	#OS.execute("C:\\Users\\willi\\Downloads\\drive-download-20260205T155341Z-1-001\\stock_object_2.exe", [], [], false)
+	names.resize(24)
 	stocks.resize(24);
 	for i in range(24):
 		stocks[i]=0
+		names = ""
+	var events = FileAccess.open("C:\\Users\\willi\\Downloads\\drive-download-20260205T155341Z-1-001\\data.txt", FileAccess.READ).get_as_text()
+	var news = FileAccess.open("C:\\Users\\willi\\Downloads\\drive-download-20260205T155341Z-1-001\\headlines.txt", FileAccess.READ).get_as_text()
+	print(news)
+	#740 lines
+	#24 data points each
+	var lines = events.split("\n")
+	for i in range (740):
+		lines[i] = lines[i].trim_suffix(" \r")
+	
+	for i in range (740):
+		stockEvents.append([])
+		var words = lines[i].split(" ")
+		for e in range (24):
+			stockEvents[i].append(words[e])
 	pass
+	#gets the data in a 24x740 2d array.
+	#each [i][e] is a singular stock point
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -7,11 +7,6 @@
 
 [node name="RobinGoodHome" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(785.24457, 354.38638)
-scale = Vector2(0.6435697, 0.6438898)
-texture = ExtResource("1_rbd2j")
-
 [node name="HomeToIndustry" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -28,7 +23,7 @@ offset_right = 255.0
 offset_bottom = 284.0
 scale = Vector2(0.92053413, 1.0175264)
 theme = ExtResource("3_2sv12")
-text = "Industry 1"
+text = "Technology"
 
 [node name="Industry2" type="Button" parent="HomeToIndustry"]
 layout_mode = 0
@@ -38,7 +33,7 @@ offset_right = 259.0
 offset_bottom = 371.0
 scale = Vector2(0.91858965, 1)
 theme = ExtResource("3_2sv12")
-text = "Industry2"
+text = "Finance"
 
 [node name="Industry3" type="Button" parent="HomeToIndustry"]
 layout_mode = 0
@@ -48,7 +43,7 @@ offset_right = 254.0
 offset_bottom = 453.0
 scale = Vector2(0.9211988, 1.0672367)
 theme = ExtResource("3_2sv12")
-text = "Industry3"
+text = "Manufacturing"
 
 [node name="HomeButton" type="Button" parent="HomeToIndustry"]
 layout_mode = 0
@@ -69,6 +64,15 @@ offset_right = 231.0
 offset_bottom = 644.0
 theme = ExtResource("3_2sv12")
 text = "Shop button"
+
+[node name="TextureRect" type="TextureRect" parent="HomeToIndustry"]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 111.0
+offset_right = 1394.0
+offset_bottom = 721.0
+scale = Vector2(0.79151905, 0.7269811)
+texture = ExtResource("1_rbd2j")
 
 [node name="WhiteBackground" type="ColorRect" parent="."]
 show_behind_parent = true
