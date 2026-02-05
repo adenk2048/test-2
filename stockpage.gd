@@ -8,7 +8,7 @@ extends Control
 @onready var sell_button: Button = $Sell
 @onready var stock_input: LineEdit = $NumberOfStocks
 @onready var money_value: Label = $Money
-var currentStock = 0;
+
 var stockCost = 10;
 
 # Called when the node enters the scene tree for the first time.
@@ -17,7 +17,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	money_value.text = "$" + str(MoneyAndStocks.money)
 	home_button.pressed.connect(_gotohome)
 	industry1_button.pressed.connect(_gotoindustry1)
@@ -38,14 +38,14 @@ func _gotoindustry3():
 	get_tree().change_scene_to_file("res://Stocks3.tscn")
 func _buy(): 
 	print("bought " + stock_input.text + " stocks")
-	MoneyAndStocks.stocks[currentStock]+=int(stock_input.text)
+	MoneyAndStocks.stocks[MoneyAndStocks.currentStock]+=int(stock_input.text)
 	if !stock_input.text == "":
 		MoneyAndStocks.money-=stockCost*int(stock_input.text)
-	print("You now have " + str(MoneyAndStocks.stocks[currentStock]) + " stocks")
+	print("You now have " + str(MoneyAndStocks.stocks[MoneyAndStocks.currentStock]) + " stocks")
 func _sell():
 	print("sold " + stock_input.text + " stocks")
-	MoneyAndStocks.stocks[currentStock]-=int(stock_input.text)
+	MoneyAndStocks.stocks[MoneyAndStocks.currentStock]-=int(stock_input.text)
 	if !stock_input.text == "":
 		MoneyAndStocks.money+=stockCost*int(stock_input.text)
-	print("You now have " + str(MoneyAndStocks.stocks[currentStock]) + " stocks")
+	print("You now have " + str(MoneyAndStocks.stocks[MoneyAndStocks.currentStock]) + " stocks")
 	

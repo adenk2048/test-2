@@ -3,7 +3,7 @@ var money = 0
 var stocks = []
 var names = []
 var stockEvents = []
-
+var currentStock = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void: 
 	#this doesn't work rn
