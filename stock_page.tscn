@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cu861mdb2t5fx"]
+[gd_scene load_steps=6 format=3 uid="uid://cu861mdb2t5fx"]
 
 [ext_resource type="Texture2D" uid="uid://prbcwlq4vrf6" path="res://minus-small.png" id="1_067gv"]
 [ext_resource type="Script" uid="uid://lw4y6m0wt8ql" path="res://stockpage.gd" id="1_l72f3"]
 [ext_resource type="Texture2D" uid="uid://dn3bxtdgmwnlx" path="res://plus-small.png" id="1_u1kq5"]
 [ext_resource type="Texture2D" uid="uid://485k2n3uk8q0" path="res://homeButton.png" id="3_tqhde"]
+[ext_resource type="Script" uid="uid://dndff8op2wky3" path="res://addons/graph_2d/graph_2d.gd" id="5_jhpa2"]
 
 [node name="StockPage" type="Node2D"]
 
@@ -35,24 +36,6 @@ theme_override_font_sizes/font_size = 64
 text = "$"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="GraphEdit" type="GraphEdit" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 225.0
-offset_top = 103.0
-offset_right = 1040.0016
-offset_bottom = 508.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GraphNode" type="GraphNode" parent="Control/GraphEdit"]
-layout_mode = 0
-offset_right = 9.0
-offset_bottom = 55.0
-mouse_filter = 1
 
 [node name="Buy" type="Button" parent="Control"]
 layout_mode = 0
@@ -130,3 +113,12 @@ offset_bottom = 627.0
 placeholder_text = "Enter number of stocks"
 alignment = 1
 max_length = 5
+
+[node name="Graph2D" type="Control" parent="Control"]
+anchors_preset = 0
+offset_left = 240.0
+offset_top = 106.0
+offset_right = 1098.0
+offset_bottom = 545.0
+script = ExtResource("5_jhpa2")
+metadata/_custom_type_script = "uid://dndff8op2wky3"

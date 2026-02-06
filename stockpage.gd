@@ -8,7 +8,7 @@ extends Control
 @onready var sell_button: Button = $Sell
 @onready var stock_input: LineEdit = $NumberOfStocks
 @onready var money_value: Label = $Money
-
+@onready var graph: Graph2D = $Graph2D
 var stockCost = 10;
 
 # Called when the node enters the scene tree for the first time.
@@ -18,6 +18,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	graph.x_min = ((Hud.day-1)*24) + Hud.time
+	graph.x_max = ((Hud.day-1)*24) + Hud.time + 20
+	#change y values to be dynamic based on min and max values
+	graph.y_min = 0
+	graph.y_max = 300
+	
+	#DELAY THE STOCKS BY 10 SECONDS
+	#update the stocks the hour AFTER the event happens
+	
 	money_value.text = "$" + str(MoneyAndStocks.money)
 	home_button.pressed.connect(_gotohome)
 	industry1_button.pressed.connect(_gotoindustry1)

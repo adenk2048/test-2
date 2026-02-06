@@ -26,3 +26,7 @@ LaptopTransition="*res://laptop_transition.tscn"
 [editor]
 
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/graph_2d/plugin.cfg")
