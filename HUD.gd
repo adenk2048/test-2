@@ -13,9 +13,20 @@ var money = 0
 var energyloss = 0
 
 func _ready() -> void:
-	menu_button.item_count = 3
+	#menu_button.item_count = 3
+	menu_button.add_item("", -1)
+	menu_button.add_item("Sugar 0x", 1)
+	menu_button.add_item("Coffee 0x", 2)
+	menu_button.add_item("50hr Energy 0x", 3)
 
 func _process(delta: float) -> void:
+	var menuid = menu_button.get_selected_id()
+	
+	if (menu_button.get_selected_id() == 1):
+		#menu_button.set_item_text(1, "Sugar" + str(Shop.sugar))
+		print()
+	
+
 	#Constructors
 	#save_button.text = "Save"
 	var current_scene := get_tree().current_scene
@@ -23,7 +34,7 @@ func _process(delta: float) -> void:
 	#	print(current_scene.name)
 	#else:
 	#	print("nothing yet null instance")
-		
+	
 		
 	time += delta/10
 	energyloss += delta / 5

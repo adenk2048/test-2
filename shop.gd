@@ -6,6 +6,7 @@ extends Control
 @onready var label: Label = $Label
 @onready var label2: Label = $Label2
 @onready var label3: Label = $Label3
+@onready var moneylabel: Label = $Money
 var sugar = 0
 var coffee = 0
 var fiftyhourenergy = 0
@@ -19,11 +20,13 @@ func _ready() -> void:
 	label.visible = false
 	label2.visible = false
 	label3.visible = false
+	moneylabel.text = "Money: $" + str(MoneyAndStocks.money)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	moneylabel.text = "Money: $" + str(MoneyAndStocks.money)
 	var current_scene := get_tree().current_scene
 	if(current_scene and current_scene.name == "@Node2D@8"):
 		sugar_button.visible = true

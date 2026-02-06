@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ueq8kxtdi2j7"]
 
-[ext_resource type="Texture2D" uid="uid://b0uyfbbkdg4gk" path="res://RobinGood.png" id="1_rbd2j"]
+[ext_resource type="Texture2D" uid="uid://b0uyfbbkdg4gk" path="res://robingood.png" id="1_rbd2j"]
 [ext_resource type="Script" uid="uid://csc4htam702wy" path="res://HomeToIndustry.gd" id="2_yuey4"]
 [ext_resource type="Theme" uid="uid://6shp5ck1tnja" path="res://FlatUI4/kenneyUI.tres" id="3_2sv12"]
 [ext_resource type="Texture2D" uid="uid://d1ry5co4i6f6" path="res://curve-down-arrow.png" id="3_rbd2j"]

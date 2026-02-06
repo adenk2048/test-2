@@ -1,5 +1,5 @@
 extends Node
-var money = 0
+var money = 100
 var stocks = []
 var names = []
 var stockEvents = []
@@ -14,9 +14,13 @@ func _ready() -> void:
 	for i in range(24):
 		stocks[i]=0
 		names[i] = ""
-	var events = FileAccess.open("C:\\Users\\willi\\Downloads\\drive-download-20260205T155341Z-1-001\\data.txt", FileAccess.READ).get_as_text()
-	var news = FileAccess.open("C:\\Users\\willi\\Downloads\\drive-download-20260205T155341Z-1-001\\headlines.txt", FileAccess.READ).get_as_text()
-	var TempNames = FileAccess.open("C:\\Users\\willi\\Downloads\\drive-download-20260205T155341Z-1-001\\stock_name.txt", FileAccess.READ).get_as_text()
+	var events = FileAccess.open("res://data/data.txt", FileAccess.READ).get_as_text()
+	var news = FileAccess.open("res://data/headlines.txt", FileAccess.READ).get_as_text()
+	var TempNames = FileAccess.open("res://data/stock_name.txt", FileAccess.READ).get_as_text()
+
+	#var events = FileAccess.open("C:\\Users\\justinahn\\Downloads\\drive-download-20260206T020935Z-1-001\\event_name.txt", FileAccess.READ).get_as_text()
+	#var news = FileAccess.open("C:\\Users\\justinahn\\Downloads/drive-download-20260206T020935Z-1-001\\headlines.txt", FileAccess.READ).get_as_text()
+	#var TempNames = FileAccess.open("C:\\Users\\justinahn\\Downloads\\drive-download-20260206T020935Z-1-001\\stock_name.txt", FileAccess.READ).get_as_text()
 	for i in range (24):
 		names[i] = (TempNames.split("\n")[i])
 		names[i] = names[i].trim_suffix("\r")
@@ -25,6 +29,7 @@ func _ready() -> void:
 	var lines = events.split("\n")
 	for i in range (740):
 		lines[i] = lines[i].trim_suffix(" \r")
+	print(events)
 	
 	for i in range (740):
 		stockEvents.append([])

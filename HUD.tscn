@@ -37,6 +37,6 @@ text = "Sleep"
 
 [node name="ItemList" type="OptionButton" parent="."]
 offset_left = 888.0
-offset_top = 498.0
+offset_top = 465.0
 offset_right = 1122.0
-offset_bottom = 570.0
+offset_bottom = 537.0
