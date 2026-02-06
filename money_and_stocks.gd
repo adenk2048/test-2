@@ -4,6 +4,7 @@ var stocks = []
 var names = []
 var stockEvents = []
 var currentStock = 0
+var news = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void: 
 	#this doesn't work rn
@@ -15,9 +16,9 @@ func _ready() -> void:
 		stocks[i]=0
 		names[i] = ""
 	var events = FileAccess.open("res://data/data.txt", FileAccess.READ).get_as_text()
-	var news = FileAccess.open("res://data/headlines.txt", FileAccess.READ).get_as_text()
+	news = FileAccess.open("res://data/headlines.txt", FileAccess.READ).get_as_text()
 	var TempNames = FileAccess.open("res://data/stock_name.txt", FileAccess.READ).get_as_text()
-
+	news = news.split("\n")
 	#var events = FileAccess.open("C:\\Users\\justinahn\\Downloads\\drive-download-20260206T020935Z-1-001\\event_name.txt", FileAccess.READ).get_as_text()
 	#var news = FileAccess.open("C:\\Users\\justinahn\\Downloads/drive-download-20260206T020935Z-1-001\\headlines.txt", FileAccess.READ).get_as_text()
 	#var TempNames = FileAccess.open("C:\\Users\\justinahn\\Downloads\\drive-download-20260206T020935Z-1-001\\stock_name.txt", FileAccess.READ).get_as_text()

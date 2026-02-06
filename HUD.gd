@@ -35,7 +35,6 @@ func _process(delta: float) -> void:
 	#else:
 	#	print("nothing yet null instance")
 	
-		
 	time += delta/10
 	energyloss += delta / 5
 	if(current_scene and current_scene.name == "Start"):

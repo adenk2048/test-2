@@ -37,10 +37,10 @@ offset_bottom = -134.0
 
 [node name="Weatherman" type="VideoStreamPlayer" parent="Control"]
 layout_mode = 0
-offset_left = -574.0
-offset_top = -302.0
-offset_right = -76.0
-offset_bottom = -22.0
+offset_left = -538.0
+offset_top = -133.0
+offset_right = -40.0
+offset_bottom = 147.0
 scale = Vector2(0.5, 0.5)
 stream = ExtResource("5_f4j51")
 

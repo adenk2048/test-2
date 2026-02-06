@@ -5,9 +5,7 @@ extends Control
 #@onready var color_rect: ColorRect = $ColorRect
 #@onready var label_day: Label = $Day_Counter <- don't delete
 #@onready var save_button: Button = $Save_Button
-var frame = -1;
 func _process(_delta: float) -> void: #will fix this later
-	frame+=1
 	#Constructors
 	#save_button.text = "Save"
 	#test
@@ -18,8 +16,14 @@ func _process(_delta: float) -> void: #will fix this later
 	
 	#save_button.pressed.connect(_Save)
 	#checks when button is pressed and fires signal to _Save to run
-	if frame%200==0:
-		weatherman.play()
+	if(MoneyAndStocks.news[((Hud.day-1)*24) + Hud.time][0] == " "):
+		print(MoneyAndStocks.news[((Hud.day-1)*24) + Hud.time])
+		weatherman.visible = true
+		if(!weatherman.is_playing()):
+			weatherman.play()
+	else:
+		weatherman.visible = false
+		print(MoneyAndStocks.news[((Hud.day-1)*24) + Hud.time])
 	computer_button.pressed.connect(_Computerbutton)
 	
 
