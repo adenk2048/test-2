@@ -29,7 +29,6 @@ func _ready() -> void:
 	var lines = events.split("\n")
 	for i in range (740):
 		lines[i] = lines[i].trim_suffix(" \r")
-	print(events)
 	
 	for i in range (740):
 		stockEvents.append([])
