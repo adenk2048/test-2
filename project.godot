@@ -21,6 +21,7 @@ Hud="*res://HUD.tscn"
 MoneyAndStocks="*res://money_and_stocks.gd"
 Transition="*res://sleep.tscn"
 Shop="*res://shop.tscn"
+LaptopTransition="*res://laptop_transition.tscn"
 
 [editor]
 

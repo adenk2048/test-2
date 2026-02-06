@@ -26,8 +26,8 @@ func _process(_delta: float) -> void: #will fix this later
 	
 func _Computerbutton():
 	print("The button works")
-	#Transition.toBlack()
-	#await Transition.transition_finished
+	LaptopTransition.Laptop()
+	await LaptopTransition.transition_finished
 	get_tree().change_scene_to_file("res://robin_good_home.tscn")
 	
 		

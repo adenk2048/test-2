@@ -14,7 +14,6 @@ var energyloss = 0
 
 func _ready() -> void:
 	menu_button.item_count = 3
-	menu_button.add_item("wow")
 
 func _process(delta: float) -> void:
 	#Constructors
