@@ -40,8 +40,8 @@ func _process(_delta: float) -> void:
 		if(max<val):
 			max = val
 	stockCost = MoneyAndStocks.stockEvents[int(((Hud.day-1)*24) + Hud.time + 18)][MoneyAndStocks.currentStock]
-	graph2d.y_min = min-40
-	graph2d.y_max = max+40
+	graph2d.y_min = min-20
+	graph2d.y_max = max+20
 	money_value.text = "$" + str(MoneyAndStocks.money)
 	
 	if(Hud.time-int(Hud.time)<0.001):
@@ -84,5 +84,7 @@ func _sell():
 	
 func updateGraph():
 	plot.remove_all()
+	graph2d.x_min = int(((Hud.day-1)*24) + Hud.time)
+	graph2d.x_max = graph2d.x_min + 18
 	for x in range (int(((Hud.day-1)*24) + Hud.time), int(((Hud.day-1)*24) + Hud.time + 19), 1):
 		plot.add_point(Vector2(float(x), float(MoneyAndStocks.stockEvents[x][MoneyAndStocks.currentStock])))
