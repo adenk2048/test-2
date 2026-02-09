@@ -33,6 +33,13 @@ func _ready() -> void:
 	
 	for i in range (740):
 		stockEvents.append([])
+		var charsToRemove = i/10
+		if(charsToRemove>=10):
+			news[i] = news[i].substr(0, news[i].length()-4)
+		elif(charsToRemove>0):
+			news[i] = news[i].substr(0, news[i].length()-3)
+		else:
+			news[i] = news[i].substr(0, news[i].length()-2)
 		var words = lines[i].split(" ")
 		for e in range (24):
 			stockEvents[i].append(words[e])

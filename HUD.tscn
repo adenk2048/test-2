@@ -40,3 +40,14 @@ offset_left = 888.0
 offset_top = 465.0
 offset_right = 1122.0
 offset_bottom = 537.0
+
+[node name="News" type="Label" parent="."]
+offset_left = 112.0
+offset_top = 11.0
+offset_right = 1031.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 35
+text = "aeaeeaeaeeaee"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

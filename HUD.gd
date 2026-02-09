@@ -5,6 +5,7 @@ extends CanvasLayer
 @onready var label_energy: Label = $Energy
 @onready var sleep_button: Button = $SleepButton
 @onready var menu_button: OptionButton = $ItemList
+@onready var news: Label = $News
 #@onready var label_money: Label = $Money
 #@onready var save_button: Button = $Save_Button
 var time := 0.0
@@ -20,11 +21,10 @@ func _ready() -> void:
 	menu_button.add_item("50hr Energy 0x", 3)
 
 func _process(delta: float) -> void:
-	var menuid = menu_button.get_selected_id()
-	
-	if (menu_button.get_selected_id() == 1):
+	#var menuid = menu_button.get_selected_id()
+	#if (menu_button.get_selected_id() == 1):
 		#menu_button.set_item_text(1, "Sugar" + str(Shop.sugar))
-		print()
+		#print()
 	
 
 	#Constructors
@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 	#else:
 	#	print("nothing yet null instance")
 	
-	time += delta/5
+	time += delta/10
 	energyloss += delta / 5
 	if(current_scene and current_scene.name == "Start"):
 		sleep_button.pressed.connect(Sleep)
@@ -46,6 +46,11 @@ func _process(delta: float) -> void:
 	#label_money.text = "Money: $" + str(money)
 		money+=1
 		round(money)
+		if(MoneyAndStocks.news[((Hud.day-1)*24) + Hud.time + 20][0] == " "):
+			news.visible = true
+			news.text = MoneyAndStocks.news[((Hud.day-1)*24) + Hud.time + 20]
+		else:
+			news.visible = false
 		sleep_button.visible = true
 		label_clock.visible = true
 		label_day.visible = true
@@ -57,6 +62,7 @@ func _process(delta: float) -> void:
 		sleep_button.visible = false
 		menu_button.visible = false
 		label_energy.visible = false
+		news.visible = false
 
 	#save_button.pressed.connect(_Save)
 	#checks when button is pressed and fires signal to _Save to run
