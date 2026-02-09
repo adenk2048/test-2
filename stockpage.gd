@@ -40,8 +40,6 @@ func _process(_delta: float) -> void:
 		if(max<val):
 			max = val
 	stockCost = MoneyAndStocks.stockEvents[int(((Hud.day-1)*24) + Hud.time + 18)][MoneyAndStocks.currentStock]
-	print(stockCost)
-	print(int(((Hud.day-1)*24) + Hud.time + 19))
 	graph2d.y_min = min-100
 	graph2d.y_max = max+100
 	money_value.text = "$" + str(MoneyAndStocks.money)
@@ -68,16 +66,20 @@ func _gotoindustry2():
 func _gotoindustry3(): 
 	get_tree().change_scene_to_file("res://Stocks3.tscn")
 func _buy(): 
-	print("bought " + stock_input.text + " stocks")
-	MoneyAndStocks.stocks[MoneyAndStocks.currentStock]+=int(stock_input.text)
 	if !stock_input.text == "":
-		MoneyAndStocks.money-=int(stockCost)*int(stock_input.text)
+		if(MoneyAndStocks.money-int(stockCost)*int(stock_input.text)<0):
+			print("you're broke")
+		else:
+			MoneyAndStocks.stocks[MoneyAndStocks.currentStock]+=int(stock_input.text)
+			MoneyAndStocks.money-=int(stockCost)*int(stock_input.text)
 	print("You now have " + str(MoneyAndStocks.stocks[MoneyAndStocks.currentStock]) + " stocks")
 func _sell():
-	print("sold " + stock_input.text + " stocks")
-	MoneyAndStocks.stocks[MoneyAndStocks.currentStock]-=int(stock_input.text)
 	if !stock_input.text == "":
-		MoneyAndStocks.money+=int(stockCost)*int(stock_input.text)
+		if(MoneyAndStocks.stocks[MoneyAndStocks.currentStock]-int(stock_input.text)<0):
+			print("you're broke")
+		else:
+			MoneyAndStocks.stocks[MoneyAndStocks.currentStock]-=int(stock_input.text)
+			MoneyAndStocks.money+=int(stockCost)*int(stock_input.text)
 	print("You now have " + str(MoneyAndStocks.stocks[MoneyAndStocks.currentStock]) + " stocks")
 	
 func updateGraph():
