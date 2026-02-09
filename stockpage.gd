@@ -40,8 +40,8 @@ func _process(_delta: float) -> void:
 		if(max<val):
 			max = val
 	stockCost = MoneyAndStocks.stockEvents[int(((Hud.day-1)*24) + Hud.time + 18)][MoneyAndStocks.currentStock]
-	graph2d.y_min = min-100
-	graph2d.y_max = max+100
+	graph2d.y_min = min-40
+	graph2d.y_max = max+40
 	money_value.text = "$" + str(MoneyAndStocks.money)
 	
 	if(Hud.time-int(Hud.time)<0.001):
