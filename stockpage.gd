@@ -8,26 +8,38 @@ extends Control
 @onready var sell_button: Button = $Sell
 @onready var stock_input: LineEdit = $NumberOfStocks
 @onready var money_value: Label = $Money
-@onready var graph: Graph2D = $Graph2D
+@onready var graph2d: Graph2D = $Graph2D
+@onready var stock_name: Label = $StockName
+
 var stockCost = 10;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	stock_name.text = str(MoneyAndStocks.names[MoneyAndStocks.currentStock])
+	print(graph2d.get_class())
+	print(graph2d.get_script())
+	#var graph = graph2d.graphs[0]
+	#var plot= graph.plots[0]
+	#plot.points = [
+	#	Vector2(1, 150),
+	#	Vector2(3, 200),
+	#	Vector2(6, 200)
+	#]
+	#graph2d.queue_redraw()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	graph.x_min = ((Hud.day-1)*24) + Hud.time
-	graph.x_max = ((Hud.day-1)*24) + Hud.time + 20
+	graph2d.x_min = ((Hud.day-1)*24) + Hud.time
+	graph2d.x_max = ((Hud.day-1)*24) + Hud.time + 20
 	#change y values to be dynamic based on min and max values
-	graph.y_min = 0
-	graph.y_max = 300
-	
+	graph2d.y_min = 0
+	graph2d.y_max = 300
+	money_value.text = "$" + str(MoneyAndStocks.money)
 	#DELAY THE STOCKS BY 10 SECONDS
 	#update the stocks the hour AFTER the event happens
 	
-	money_value.text = "$" + str(MoneyAndStocks.money)
 	home_button.pressed.connect(_gotohome)
 	industry1_button.pressed.connect(_gotoindustry1)
 	industry2_button.pressed.connect(_gotoindustry2)

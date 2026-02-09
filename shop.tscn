@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dp75isnv8cjln"]
+[gd_scene load_steps=8 format=3 uid="uid://dp75isnv8cjln"]
 
 [ext_resource type="Script" uid="uid://bx1whj2dx48qu" path="res://shopsprites.gd" id="1_gmb2m"]
 [ext_resource type="Script" uid="uid://7iwk7jmf1v78" path="res://shop.gd" id="1_viryw"]
 [ext_resource type="Texture2D" uid="uid://d1ry5co4i6f6" path="res://curve-down-arrow.png" id="2_6lah5"]
 [ext_resource type="Texture2D" uid="uid://droargogi6l71" path="res://sugar.jpeg" id="2_e7rdd"]
 [ext_resource type="Texture2D" uid="uid://nlxlughdtkdo" path="res://coffee.jpg" id="3_blqjs"]
+[ext_resource type="Theme" uid="uid://6shp5ck1tnja" path="res://FlatUI4/kenneyUI.tres" id="4_8kdgp"]
 [ext_resource type="Texture2D" uid="uid://dityt8e4884re" path="res://50hourenergy.png" id="4_fgaav"]
 
 [node name="Shop" type="Node2D"]
@@ -84,12 +85,25 @@ icon = ExtResource("2_6lah5")
 
 [node name="Money" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 835.0
-offset_top = 12.0
-offset_right = 1130.0
-offset_bottom = 118.0
+offset_left = 1020.0
+offset_top = 26.0
+offset_right = 1135.0
+offset_bottom = 132.0
 theme_override_font_sizes/font_size = 48
 horizontal_alignment = 1
+
+[node name="WhiteBackground" type="ColorRect" parent="Control"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -45.0
+offset_top = -27.0
+offset_right = 1179.0
+offset_bottom = 679.0
+scale = Vector2(1.0083549, 1.0014893)
+mouse_filter = 2
+theme = ExtResource("4_8kdgp")
+color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Sugar" type="Sprite2D" parent="."]
 position = Vector2(187, 350)

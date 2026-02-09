@@ -1,13 +1,11 @@
-24
 William_Mo_Industries WILMO
 Envidia_Inc NVDA
 crApple_Inc AAPL
 CodeForces_Inc CF
 TuffSci_Corp ATCS
 Bessie_Tech USACO
-American_Tech_&_Tuffsci T
+American_Tech_&_Tuffsci AT&T
 Spoodify_Inc SPOO
-
 Goldenbal_Sachs GS
 MP_Corgan_and_Jase JPM
 Citycorp CITY
@@ -16,12 +14,11 @@ BankFraud_Corp ABF
 Bank_of_Avik LEHM
 Berkhath_Shireway BRK
 DebtTrap_Inc DBT
-
 Bergen_County_Steel X
 Jupiter_Mining_Co JUP
 DrillBabyDrill_Co DBD
 Amazon_Obliterator_Inc AMZN
 Tomoya_Motor_Co TM
-Super_Safe_Nuclear_Reactors_Inc OOPS
+BCA National Petroleum Company BCAE
 Super_Safe_Nuclear_Reactors_Inc OOPS
 Academy_of_Only_Electrical_Engineering AEDT

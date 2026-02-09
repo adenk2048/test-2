@@ -26,7 +26,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	moneylabel.text = "Money: $" + str(MoneyAndStocks.money)
+	moneylabel.text = "$" + str(MoneyAndStocks.money)
 	var current_scene := get_tree().current_scene
 	if(current_scene and current_scene.name == "@Node2D@8"):
 		sugar_button.visible = true

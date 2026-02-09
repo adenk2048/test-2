@@ -46,34 +46,34 @@ func _gotohome():
 	get_tree().change_scene_to_file("res://robin_good_home.tscn")
 	
 func _gotostock1():
-	MoneyAndStocks.currentStock = 0
+	MoneyAndStocks.currentStock = 8
 	get_tree().change_scene_to_file("res://stock_page.tscn")
 func _gotostock2(): 
-	MoneyAndStocks.currentStock = 1
+	MoneyAndStocks.currentStock = 9
 	get_tree().change_scene_to_file("res://stock_page.tscn")
 	
 func _gotostock3(): 
-	MoneyAndStocks.currentStock = 2
+	MoneyAndStocks.currentStock = 10
 	get_tree().change_scene_to_file("res://stock_page.tscn")
 	
 func _gotostock4(): 
-	MoneyAndStocks.currentStock = 3
+	MoneyAndStocks.currentStock = 11
 	get_tree().change_scene_to_file("res://stock_page.tscn")
 	
 func _gotostock5(): 
-	MoneyAndStocks.currentStock = 4
+	MoneyAndStocks.currentStock = 12
 	get_tree().change_scene_to_file("res://stock_page.tscn")
 	
 func _gotostock6(): 
-	MoneyAndStocks.currentStock = 5
+	MoneyAndStocks.currentStock = 13
 	get_tree().change_scene_to_file("res://stock_page.tscn")	
 	
 func _gotostock7(): 
-	MoneyAndStocks.currentStock = 6
+	MoneyAndStocks.currentStock = 14
 	get_tree().change_scene_to_file("res://stock_page.tscn")
 	
 func _gotostock8(): 
-	MoneyAndStocks.currentStock = 7
+	MoneyAndStocks.currentStock = 15
 	get_tree().change_scene_to_file("res://stock_page.tscn")
 	
 	

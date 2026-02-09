@@ -16,14 +16,12 @@ func _process(_delta: float) -> void: #will fix this later
 	
 	#save_button.pressed.connect(_Save)
 	#checks when button is pressed and fires signal to _Save to run
-	if(MoneyAndStocks.news[((Hud.day-1)*24) + Hud.time][0] == " "):
-		print(MoneyAndStocks.news[((Hud.day-1)*24) + Hud.time])
+	if(MoneyAndStocks.news[((Hud.day-1)*24) + Hud.time + 20][0] == " "):
 		weatherman.visible = true
 		if(!weatherman.is_playing()):
 			weatherman.play()
 	else:
 		weatherman.visible = false
-		print(MoneyAndStocks.news[((Hud.day-1)*24) + Hud.time])
 	computer_button.pressed.connect(_Computerbutton)
 	
 

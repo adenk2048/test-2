@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://da4brp4xemrnu"]
+[gd_scene load_steps=4 format=3 uid="uid://da4brp4xemrnu"]
 
-[ext_resource type="Script" uid="uid://sjv4ip2ak7xr" path="res://goToHome.gd" id="1_c81hf"]
+[ext_resource type="Theme" uid="uid://6shp5ck1tnja" path="res://FlatUI4/kenneyUI.tres" id="1_sf37h"]
+[ext_resource type="Script" uid="uid://ctbe0lpx2p573" path="res://go_to_home2.gd" id="2_fb5eb"]
 [ext_resource type="Texture2D" uid="uid://d1ry5co4i6f6" path="res://curve-down-arrow.png" id="2_sf37h"]
 
 [node name="Industries" type="Node2D"]
@@ -10,34 +11,9 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_c81hf")
-
-[node name="Industry1" type="Button" parent="goToHome"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 240.00002
-offset_right = 255.0
-offset_bottom = 284.0
-scale = Vector2(0.92053413, 1.0175264)
-text = "Industry 1"
-
-[node name="Industry2" type="Button" parent="goToHome"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 400.0
-offset_right = 257.0
-offset_bottom = 444.0
-scale = Vector2(0.91858965, 1)
-text = "Industry2"
-
-[node name="Industry3" type="Button" parent="goToHome"]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 550.0
-offset_right = 260.0
-offset_bottom = 591.0
-scale = Vector2(0.9211988, 1.0672367)
-text = "Industry3"
+theme = ExtResource("1_sf37h")
+script = ExtResource("2_fb5eb")
+metadata/_edit_use_anchors_ = true
 
 [node name="HomeButton" type="Button" parent="goToHome"]
 layout_mode = 0
@@ -48,11 +24,119 @@ offset_bottom = 723.0
 rotation = -1.5705711
 scale = Vector2(0.3828328, -0.43180954)
 icon = ExtResource("2_sf37h")
+metadata/_edit_use_anchors_ = true
 
-[node name="StockButton" type="Button" parent="goToHome"]
+[node name="StockButton1" type="Button" parent="goToHome"]
 layout_mode = 0
-offset_left = 432.0
-offset_top = 232.0
-offset_right = 967.0
-offset_bottom = 464.0
-text = "stock page woa"
+offset_left = 273.0
+offset_top = 119.0
+offset_right = 497.0
+offset_bottom = 198.0
+text = "GS"
+
+[node name="StockButton2" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 121.0
+offset_right = 817.0
+offset_bottom = 200.0
+text = "JPM"
+
+[node name="StockButton3" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 120.0
+offset_right = 1136.0
+offset_bottom = 199.0
+text = "CITY"
+
+[node name="StockButton4" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 320.0
+offset_right = 501.0
+offset_bottom = 399.0
+text = "UNH"
+
+[node name="StockButton5" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 599.0
+offset_top = 321.0
+offset_right = 823.0
+offset_bottom = 400.0
+text = "ABF"
+
+[node name="StockButton6" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 322.0
+offset_right = 1128.0
+offset_bottom = 401.0
+text = "LEHM"
+
+[node name="StockButton7" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 506.0
+offset_right = 671.0
+offset_bottom = 585.0
+text = "BRK"
+
+[node name="StockButton8" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 507.0
+offset_right = 1008.0
+offset_bottom = 586.0
+text = "DBT"
+
+[node name="WhiteBackground" type="ColorRect" parent="goToHome"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -45.0
+offset_top = -27.0
+offset_right = 1179.0
+offset_bottom = 679.0
+scale = Vector2(1.0083549, 1.0014893)
+mouse_filter = 2
+theme = ExtResource("1_sf37h")
+color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+
+[node name="Industry1" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 240.00002
+offset_right = 255.0
+offset_bottom = 287.251
+scale = Vector2(0.92053413, 1.0175264)
+theme = ExtResource("1_sf37h")
+text = "Technology"
+
+[node name="Industry2" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 327.0
+offset_right = 259.0
+offset_bottom = 374.251
+scale = Vector2(0.91858965, 1)
+theme = ExtResource("1_sf37h")
+text = "Finance"
+
+[node name="Industry3" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 1.0000001
+offset_top = 412.0
+offset_right = 254.0
+offset_bottom = 459.251
+scale = Vector2(0.9211988, 1.0672367)
+theme = ExtResource("1_sf37h")
+text = "Manufacturing"
+
+[node name="Shop" type="Button" parent="goToHome"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 590.0
+offset_right = 231.0
+offset_bottom = 644.0
+theme = ExtResource("1_sf37h")
+text = "Shop button"

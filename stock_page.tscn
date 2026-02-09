@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cu861mdb2t5fx"]
+[gd_scene load_steps=7 format=3 uid="uid://cu861mdb2t5fx"]
 
 [ext_resource type="Texture2D" uid="uid://prbcwlq4vrf6" path="res://minus-small.png" id="1_067gv"]
 [ext_resource type="Script" uid="uid://lw4y6m0wt8ql" path="res://stockpage.gd" id="1_l72f3"]
 [ext_resource type="Texture2D" uid="uid://dn3bxtdgmwnlx" path="res://plus-small.png" id="1_u1kq5"]
 [ext_resource type="Texture2D" uid="uid://485k2n3uk8q0" path="res://homeButton.png" id="3_tqhde"]
 [ext_resource type="Script" uid="uid://dndff8op2wky3" path="res://addons/graph_2d/graph_2d.gd" id="5_jhpa2"]
+[ext_resource type="Theme" uid="uid://6shp5ck1tnja" path="res://FlatUI4/kenneyUI.tres" id="6_doas7"]
 
 [node name="StockPage" type="Node2D"]
 
@@ -15,42 +16,32 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_l72f3")
 
-[node name="Stock name" type="Label" parent="Control"]
+[node name="StockName" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 158.0
-offset_top = 13.0
-offset_right = 1010.0
-offset_bottom = 108.0
-theme_override_font_sizes/font_size = 64
+offset_left = 220.0
+offset_top = 9.0
+offset_right = 974.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_font_sizes/font_size = 40
 text = "Insert Stock name here"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Money" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 902.0
-offset_top = 22.0
-offset_right = 1189.0
-offset_bottom = 117.0
-theme_override_font_sizes/font_size = 64
-text = "$"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Buy" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 227.0
-offset_top = 557.0
-offset_right = 361.0
-offset_bottom = 634.0
+offset_left = 234.0
+offset_top = 558.0
+offset_right = 368.0
+offset_bottom = 635.0
 theme_override_font_sizes/font_size = 32
 text = "Buy"
 
 [node name="Sell" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 374.0
+offset_left = 385.0
 offset_top = 557.0
-offset_right = 528.0
+offset_right = 539.0
 offset_bottom = 635.0
 theme_override_font_sizes/font_size = 32
 text = "Sell"
@@ -80,30 +71,6 @@ offset_bottom = 208.0
 scale = Vector2(0.55, 0.55)
 icon = ExtResource("3_tqhde")
 
-[node name="Industry1" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 144.0
-offset_right = 224.0
-offset_bottom = 233.0
-text = "aaa"
-
-[node name="Industry2" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 300.0
-offset_right = 224.0
-offset_bottom = 389.0
-text = "bbb"
-
-[node name="Industry3" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 459.0
-offset_right = 224.0
-offset_bottom = 548.0
-text = "ccc"
-
 [node name="NumberOfStocks" type="LineEdit" parent="Control"]
 layout_mode = 0
 offset_left = 561.0
@@ -116,9 +83,76 @@ max_length = 5
 
 [node name="Graph2D" type="Control" parent="Control"]
 anchors_preset = 0
-offset_left = 240.0
-offset_top = 106.0
-offset_right = 1098.0
-offset_bottom = 545.0
+offset_left = 234.0
+offset_top = 95.0
+offset_right = 1155.0
+offset_bottom = 546.0
 script = ExtResource("5_jhpa2")
 metadata/_custom_type_script = "uid://dndff8op2wky3"
+
+[node name="Industry1" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 240.00002
+offset_right = 255.0
+offset_bottom = 287.251
+scale = Vector2(0.92053413, 1.0175264)
+theme = ExtResource("6_doas7")
+text = "Technology"
+metadata/_edit_use_anchors_ = true
+
+[node name="Industry2" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = -0.08818893
+offset_left = 4.0
+offset_top = 327.0
+offset_right = 259.0
+offset_bottom = 374.251
+scale = Vector2(0.91858965, 1)
+theme = ExtResource("6_doas7")
+text = "Finance"
+metadata/_edit_use_anchors_ = true
+
+[node name="Industry3" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1.0000001
+offset_top = 412.0
+offset_right = 254.0
+offset_bottom = 459.251
+scale = Vector2(0.9211988, 1.0672367)
+theme = ExtResource("6_doas7")
+text = "Manufacturing"
+metadata/_edit_use_anchors_ = true
+
+[node name="Shop" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 590.0
+offset_right = 231.0
+offset_bottom = 644.0
+theme = ExtResource("6_doas7")
+text = "Shop button"
+metadata/_edit_use_anchors_ = true
+
+[node name="Money" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 1055.0
+offset_top = 25.0
+offset_right = 1128.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_font_sizes/font_size = 40
+text = "t"
+
+[node name="WhiteBackground" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_left = -45.0
+offset_top = -27.0
+offset_right = 1179.0
+offset_bottom = 679.0
+scale = Vector2(1.0083549, 1.0014893)
+mouse_filter = 2
+theme = ExtResource("6_doas7")
+color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+metadata/_edit_use_anchors_ = true

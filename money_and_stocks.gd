@@ -1,5 +1,5 @@
 extends Node
-var money = 100
+var money = 500
 var stocks = []
 var names = []
 var stockEvents = []
