@@ -10,36 +10,37 @@ extends Control
 @onready var money_value: Label = $Money
 @onready var graph2d: Graph2D = $Graph2D
 @onready var stock_name: Label = $StockName
-
+var plot
 var stockCost = 10;
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	plot = graph2d.add_plot_item(str(MoneyAndStocks.names[MoneyAndStocks.currentStock]), Color.WHITE, 3.0)
 	stock_name.text = str(MoneyAndStocks.names[MoneyAndStocks.currentStock])
-	print(graph2d.get_class())
-	print(graph2d.get_script())
-	#var graph = graph2d.graphs[0]
-	#var plot= graph.plots[0]
-	#plot.points = [
-	#	Vector2(1, 150),
-	#	Vector2(3, 200),
-	#	Vector2(6, 200)
-	#]
-	#graph2d.queue_redraw()
+	updateGraph()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	graph2d.x_min = ((Hud.day-1)*24) + Hud.time
-	graph2d.x_max = ((Hud.day-1)*24) + Hud.time + 20
+	graph2d.x_max = ((Hud.day-1)*24) + Hud.time + 19
 	#change y values to be dynamic based on min and max values
-	graph2d.y_min = 0
-	graph2d.y_max = 300
+	var min = 99999
+	var max = -99999
+	for i in range(((Hud.day-1)*24) + Hud.time, ((Hud.day-1)*24) + Hud.time + 21, 1):
+		var val = float(MoneyAndStocks.stockEvents[i][MoneyAndStocks.currentStock])
+		if(min>val):
+			min = val
+		if(max<val):
+			max = val
+	graph2d.y_min = min-100
+	graph2d.y_max = max+100
 	money_value.text = "$" + str(MoneyAndStocks.money)
+	print(Hud.time-int(Hud.time))
+	if(Hud.time-int(Hud.time)<0.003):
+		updateGraph()
 	#DELAY THE STOCKS BY 10 SECONDS
 	#update the stocks the hour AFTER the event happens
-	
 	home_button.pressed.connect(_gotohome)
 	industry1_button.pressed.connect(_gotoindustry1)
 	industry2_button.pressed.connect(_gotoindustry2)
@@ -70,3 +71,8 @@ func _sell():
 		MoneyAndStocks.money+=stockCost*int(stock_input.text)
 	print("You now have " + str(MoneyAndStocks.stocks[MoneyAndStocks.currentStock]) + " stocks")
 	
+func updateGraph():
+	plot.remove_all()
+	for x in range (((Hud.day-1)*24) + Hud.time, ((Hud.day-1)*24) + Hud.time + 21, 1):
+		print(x)
+		plot.add_point(Vector2(float(x), float(MoneyAndStocks.stockEvents[x][MoneyAndStocks.currentStock])))

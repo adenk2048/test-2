@@ -35,13 +35,13 @@ func _process(delta: float) -> void:
 	#else:
 	#	print("nothing yet null instance")
 	
-	time += delta/10
+	time += delta/5
 	energyloss += delta / 5
 	if(current_scene and current_scene.name == "Start"):
 		sleep_button.pressed.connect(Sleep)
 		#print(energyloss)
 	
-		label_clock.text = str(int(round(time))) + ":00"
+		label_clock.text = str(int(time)) + ":00"
 		label_day.text = "Day " + str(day)
 	#label_money.text = "Money: $" + str(money)
 		money+=1
